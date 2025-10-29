@@ -1,0 +1,49 @@
+\usepackage{caption}
+% \captionsetup[figure]{labelformat=empty,textformat=empty}
+\captionsetup[figure]{labelformat=empty}
+\usepackage{xcolor}
+
+\usepackage{xparse}
+% \NewDocumentCommand{\commandline}{oommm}
+%  {% #1 = width (optional)
+%   % #2 = inner alignment (optional)
+%   % #3 = frame color
+%   % #4 = background color
+%   % #5 = text
+%   \IfValueTF{\textwidth}
+%    {%
+%     \IfValueTF{l}
+%      {\fcolorbox{black}{black}{\makebox[\textwidth][l]{\textbf{\textcolor{white}{#1}}}}}
+%      {\fcolorbox{black}{black}{\makebox[\textwidth]{#1}}}%
+%    }
+%    {\fcolorbox{black}{black}{#1}}%
+%  }
+
+\usepackage{setspace}
+
+\usepackage{multicol}
+\usepackage{awesomebox}
+
+\usepackage{tcolorbox}
+\newtcolorbox{info-box}{colback=cyan!5!white,arc=0pt,outer arc=0pt,colframe=cyan!60!black}
+\newtcolorbox{warning-box}{colback=orange!5!white,arc=0pt,outer arc=0pt,colframe=orange!80!black}
+\newtcolorbox{error-box}{colback=red!5!white,arc=0pt,outer arc=0pt,colframe=red!75!black}
+
+\newtcolorbox{myquote}{colback=red!5!white, colframe=red!75!black}
+\renewenvironment{quote}{\begin{myquote}}{\end{myquote}}
+
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+\usepackage{libertine}
+\usepackage[scale=0.95]{inconsolata}
+\lstset{basicstyle=\ttfamily,columns=fullflexible,keywordstyle=\sffamily}
+\newcommand{\CodeEmphasis}[1]{\textbf{#1}}
+\newcommand{\CodeEmphasisLine}[1]{\textbf{#1}}
+
+\definecolor{codebg}{gray}{0.95}
+\definecolor{codeframe}{gray}{0.8}
+
+\newcommand{\inlinecode}[1]{\fcolorbox{codeframe}{codebg}{\small\!\texttt{#1}\!}}
+
+\newcommand{\commandline}[1]{\fcolorbox{black}{black}{\makebox[\textwidth][l]{\textcolor{white}{#1}}}}
+
