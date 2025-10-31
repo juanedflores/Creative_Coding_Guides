@@ -18,12 +18,13 @@ pandoc-latex-environment:
     - box
   warning-box:
     - warning
-title: Getting Started with PICO-8
+subtitle: GETTING STARTED GUIDE
+title: PICO-8
 titlepage: true
 titlepage-background: /Users/juaneduardoflores/Downloads/clouds_export.png
 titlepage-rule-height: 0
 titlepage-text-color: FF5f87
-titlepage-text-size: 24pt
+titlepage-text-size: 34pt
 updated: 2025-10-29T06:20:43.996-05:00
 ---
 
@@ -33,7 +34,7 @@ updated: 2025-10-29T06:20:43.996-05:00
 
 PICO-8 is a popular example of a **fantasy console**. A fantasy console is a fictitious video game console played on an emulator (a software that imitates the architecture of a specific hardware).
 
-PICO-8 creates the experience of retro gaming using the \textcolor{blue}{Lua programming language} and with very specific technical limitations. It can be a fun way to learn programming and game design.
+PICO-8 creates the experience of retro gaming using the \textcolor{blue}{Lua programming language} with very specific technical limitations. It can be a fun way to learn programming and game design.
 
 The creator of PICO-8, described the term:
 
@@ -47,11 +48,11 @@ The PICO-8 is a computer that never existed, but it is inspired by real computer
 
 ::: columns
 
-![|400](https://i.imgur.com/EjYUBbn.png){ height=250 }\
+![|400](https://i.imgur.com/EjYUBbn.png){ height=150 }\
 
 \textcolor{lightgray}{Apple IIe}
 
-![|400](https://i.imgur.com/sMaaeHj.png){ height=250 }\
+![|400](https://i.imgur.com/sMaaeHj.png){ height=150 }\
 
 \textcolor{lightgray}{Commodore 64}
 
@@ -93,7 +94,7 @@ The **Commodore 64** has a 320x200 pixel display with 16 colors. It was released
 \end{center}
 ```
 
-\hfill \break
+<!-- \hfill \break -->
 
 ::: columns
 
@@ -109,7 +110,7 @@ Mode 0 has a resolution of 640x256 pixels.
 \begin{center}
 ```
 
-![|200](https://i.imgur.com/rnkAIjy.png){ width=150 }\
+![|200](https://i.imgur.com/rnkAIjy.png){ width=100 }\
 
 ```{=latex}
 \end{center}
@@ -161,7 +162,7 @@ Before Graphical User Interfaces (GUIs) that rely on the use of a mouse to click
 
 **CLI**, **terminal**, **console**, and even **shell** are all terms that are often used interchangeably to indicate a text based system for navigating an operating system. It could get confusing, but they all refer to similar concepts.
 
-\pagebreak
+---
 
 A [Terminal]{.underline} is a program that emulates a physical terminal, which historically was an electromechanical device that connected to a larger computer to interact with its functions.
 
@@ -196,13 +197,11 @@ In the world of Unix, a [Shell]{.underline} is a command-line interpreter that p
 
 In Unix based systems like Linux or MacOS, you see this command prompt: 
 
-```shell
-$
-```
+\commandline{\textbf{\$}}
 
 In Windows, you might see what is seen in PICO-8, the **>** symbol, prompting the user to enter a command. It is based on the Microsoft Disk Operating System (MS-DOS) command line interface.
 
-\pagebreak
+\commandline{\textbf{>}}
 
 ### SPLORE & File System Navigation Commands
 
@@ -218,19 +217,21 @@ PICO-8 actually tells you to type **HELP** for help. By typing help and pressing
 \end{center}
 ```
 
-Before we learn how to install demos and run them, let's type the command that is in \textcolor{magenta}{pink text: SPLORE}. Remember that the computer does not receive the typed command until you press the **ENTER** key.
+Before we learn how to install demos and run them, let's type the command that is in pink text: \textcolor{pico-magenta}{SPLORE}. Remember that the computer does not receive the typed command until you press the **ENTER** key.
 
 \commandline{> \textbf{SPLORE}}
 
 ::: info
+
+\textcolor{teal}{\textbf{NOTE}}
+
+\hfill
 
 In PICO-8, everything is uppercase. If you try typing uppercase letters by pressing Shift, you will find that you will get random symbols instead. Just type in lowercase letters when entering commands and when you start to write code later on.
 
 :::
 
 [SPLORE]{.underline} is a graphical interface for exploring PICO-8 cartridges that others have written and published. Here you can also publish your own games. Think of it as a way to explore and browse through a library of games that the public contributes to.
-
-\pagebreak
 
 ```{=latex}
 \begin{center}
@@ -261,7 +262,7 @@ This is an opportunity to introduce one quirk of PICO-8 games: they only use up 
 \begin{center}
 ```
 
-![|300](https://i.imgur.com/emvmmoT.png){ width=50% }\
+![|300](https://i.imgur.com/emvmmoT.png){ width=40% }\
 
 ```{=latex}
 \end{center}
@@ -293,19 +294,28 @@ If that happens, you can reset to default by entering keyconfig and then pressin
 
 :::
 
----
-
 While getting to have fun in SPLORE, you might notice that the games are limited to a 16 color palette and a small resolution of **128 x 128 pixels**. This is part of the design culture of PICO-8, which embraces limitations to inspire creativity.
 
 ```{=latex}
 \begin{center}
 ```
-![|400](https://i.imgur.com/HTZrefn.png){ width=70% }\
+![|400](https://i.imgur.com/HTZrefn.png){ width=50% }\
+
+\hfill
+
+\textcolor{lightgray}{The PICO-8 is limited to 16 colors (with some trickery you can get 16 more!)}
+
+\hfill
 
 ![|300](https://i.imgur.com/ZBqDcAr.png){ width=50% }\
+
+\hfill
+\textcolor{lightgray}{The display resolution of 128 x 128 pixels. Note how 0 is at the top left corner, and how it increases the X by going right, and increased Y by going down.}
 ```{=latex}
 \end{center}
 ```
+
+
 
 Other limitations worth mentioning:
 
@@ -318,7 +328,7 @@ In the command line, we don't have a GUI to click on folders or files, so we nee
 
 What we know as folders in GUIs are called **directories** in command line interfaces.
 
-To view the files and directories in the current directory, we can use the 'ls' command.
+To view the files and directories in the current directory, we can use the **LS** command.
 
 ::: info
 
@@ -326,7 +336,7 @@ To view the files and directories in the current directory, we can use the 'ls' 
 
 \hfill
 
-**LS** stands for "list". It lists all files and directories in the current directory.
+**LS** stands for "list". It lists all files and directories in the current directory. "List all contents"
 
 :::
 
@@ -342,9 +352,7 @@ Currently, we don't have any directories, so nothing is listed under what is our
 
 Let's try this command next:
 
-```shell
-> INSTALL_DEMOS
-```
+\commandline{> \textbf{INSTALL\_DEMOS}}
 
 This will install some demo cartridges into our file system. Try typing **LS** again to see the newly created directory.
 
@@ -358,24 +366,20 @@ This will install some demo cartridges into our file system. Try typing **LS** a
 
 At the bottom of the screen, we can see:
 
-```shell
-DIRECTORY: /
-DEMOS
-````
+\commandline{\textcolor{pico-cyan}{\textbf{DIRECTORY: /}}}
+\commandline{\textcolor{pico-magenta}{\textbf{DEMOS}}}
 
 To enter the DEMOS directory, we can use the **CD** command.
 
 ::: info
-```shell
-> CD <directory_name>
-```
+\commandline{> \textbf{CD <directory\_name>}}
+
+\hfill
 
 CD stands for "change directory." It allows us to navigate into a different directory.
 :::
 
-```shell
-> CD DEMOS
-```
+\commandline{> \textbf{CD DEMOS}}
 
 ```{=latex}
 \begin{center}
@@ -399,9 +403,9 @@ To run a cartridge, we can use the **LOAD** command followed by the name of the 
 
 ::: info
 
-```shell
-> LOAD <cartridge_name>
-```
+\commandline{> \textbf{LOAD <cartridge\_name>}}
+
+\hfill
 
 Loads the specified cartridge.
 
@@ -415,14 +419,12 @@ A tip when typing file or directory names: you can use the TAB key to auto-compl
 
 :::
 
-```shell
-> LOAD API.P8
-```
+\commandline{> \textbf{LOAD API.P8}}
 
 ```{=latex}
 \begin{center}
 ```
-![](https://i.imgur.com/yW7pUTc.png){ width=80% }\
+![|400](https://i.imgur.com/yW7pUTc.png){ width=80% }\
 ```{=latex}
 \end{center}
 ```
@@ -431,9 +433,9 @@ Lastly, use the **RUN** command to run the cartridge.
 
 ::: info
 
-```shell
-> RUN
-```
+\commandline{> \textbf{RUN}}
+
+\hfill
 
 Runs the currently loaded cartridge.
 
@@ -464,8 +466,6 @@ You can press **Ctrl + L** to clear the terminal screen!
 Instead of typing **RUN** each time, you could just press **Ctrl + R** to run the currently loaded cartridge or restart it.
 
 :::
-
-\pagebreak
 
 ## The Code Editor
 
@@ -881,7 +881,7 @@ The reset position should be a negative value that is the width of the sprite si
 
 ### Full Minimal Program
 
-```{.lua emphasize=2-2,3:3-3:12}
+```{.lua}
 cloud_x = 20
 
 function _update()
@@ -918,4 +918,3 @@ To take a screenshot of your screen, press **Ctrl + 6**.
 ```{=latex}
 \end{center}
 ```
-
