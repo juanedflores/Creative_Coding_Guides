@@ -30,7 +30,7 @@ updated: 2025-10-29T06:20:43.996-05:00
 
 # Getting Started with PICO-8
 
-## <u>Introduction</u>
+## Introduction
 
 PICO-8 is a popular example of a **fantasy console**. A fantasy console is a fictitious video game console played on an emulator (a software that imitates the architecture of a specific hardware).
 
@@ -42,7 +42,7 @@ The creator of PICO-8, described the term:
 > 
 > \- Joseph White
 
-## <u>Influences</u>
+## Influences
 
 The PICO-8 is a computer that never existed, but it is inspired by real computers from the 1980s.
 
@@ -61,10 +61,10 @@ The PICO-8 is a computer that never existed, but it is inspired by real computer
 
 ::: columns
 
-The **Apple IIe** was released in January 1983. It was intended for home and educational use. It had a 280x192 pixel display with 6 colors for high resolution, and 16 colors for low resolution.
+The **Apple IIe** was released in January 1983. It was intended for home and educational use. It had a **280 x 192** pixel display with 6 colors for high resolution, and 16 colors for low resolution.
   
 
-The **Commodore 64** has a 320x200 pixel display with 16 colors. It was released in August 1982 and became the best-selling single computer model of all time.
+The **Commodore 64** has a **320 x 200** pixel display with 16 colors. It was released in August 1982 and became the best-selling single computer model of all time.
   
 :::
 
@@ -104,7 +104,7 @@ In 1982, there was a TV series called _The Computer Programme_, which focused on
 
 It can be switched between several display modes. Modes 0 to 6 could display a palette of sixteen colors using the eight basic colors at the vertices of the RGB color cube and eight flashing colors made by alternating the basic color and its inverse.
 
-Mode 0 has a resolution of 640x256 pixels.
+Mode 0 has a resolution of **640 x 256** pixels.
 
 ```{=latex}
 \begin{center}
@@ -125,15 +125,15 @@ Mode 0 has a resolution of 640x256 pixels.
 \begin{center}
 ```
 
-![A caption|300](https://i.imgur.com/Jnn3tGh.png){ width=57% }\
+![A caption|300](https://i.imgur.com/Jnn3tGh.png){ width=67% }\
 
-BBC Micro running on an emulator.
+\textcolor{lightgray}{BBC Micro running on an emulator.}
 
 \hfill \break
 
-![A caption|300](https://i.imgur.com/LTuaPOl.png){ width=57% }\
+![A caption|300](https://i.imgur.com/LTuaPOl.png){ width=67% }\
 
-PICO-8's Command Line Interface.
+\textcolor{lightgray}{PICO-8's Command Line Interface.}
 
 ```{=latex}
 \end{center}
@@ -158,9 +158,9 @@ The **>** symbol followed by the blinking red cursor indicates that the system i
 
 Before Graphical User Interfaces (GUIs) that rely on the use of a mouse to click graphic icons that resemble real-world objects to open and close windows, there was the command line interface (CLI). 
 
-> According to a wikibook Operating System Design: "A [command line interface or CLI]{.underline} is a method of interacting with a computer by giving it lines of textual commands
+> According to a wikibook Operating System Design: "A [command line interface or CLI]{.underline} is a method of interacting with a computer by giving it lines of textual commands.
 
-**CLI**, **terminal**, **console**, and even **shell** are all terms that are often used interchangeably to indicate a text based system for navigating an operating system. It could get confusing, but they all refer to similar concepts.
+**CLI**, **terminal**, **console**, and even **shell** are all terms that are often used interchangeably to indicate a text based system for navigating an operating system. It could get confusing, but they all refer to similar concepts. It won't hurt to take at the history of the terms to get an idea of how and why we use them.
 
 ---
 
@@ -195,7 +195,7 @@ Later the term was used for a special teletype/terminal attached to the computer
 
 In the world of Unix, a [Shell]{.underline} is a command-line interpreter that provides a user interface for access to an operating system's services. There are many different Unix shells. Popular shells for interactive use include [Bash]{.underline}, [Zsh]{.underline}, and [Fish]{.underline}.
 
-In Unix based systems like Linux or MacOS, you see this command prompt: 
+In Unix based systems like Linux or MacOS, you may see this command prompt: 
 
 \commandline{\textbf{\$}}
 
@@ -203,9 +203,11 @@ In Windows, you might see what is seen in PICO-8, the **>** symbol, prompting th
 
 \commandline{\textbf{>}}
 
-### SPLORE & File System Navigation Commands
+### First Commands
 
-PICO-8 actually tells you to type **HELP** for help. By typing help and pressing enter, you get in return a list of commands that you can use in PICO-8.
+In the startup screen PICO-8 advises you of the **HELP** command. It says: "Type **HELP** for help". By typing help and pressing **ENTER**, you get in return a list of commands that you can use in PICO-8.
+
+\commandline{> \textbf{HELP}}
 
 ```{=latex}
 \begin{center}
@@ -217,7 +219,31 @@ PICO-8 actually tells you to type **HELP** for help. By typing help and pressing
 \end{center}
 ```
 
-Before we learn how to install demos and run them, let's type the command that is in pink text: \textcolor{pico-magenta}{SPLORE}. Remember that the computer does not receive the typed command until you press the **ENTER** key.
+The convention of having a help command is common. You can even write **HELP** followed by another command or function for additional information about it.
+
+::: blank
+
+\commandline{> \textbf{HELP \textcolor{gray}{\textbf{<command>}}}}
+
+:::
+
+The list of commands can be overwhelming. It can be difficult to know where to start and it all looks so bare and technical. The next command \textcolor{pico-magenta}{SPLORE} is a lot more fun.
+
+\commandline{> \textbf{HELP SPLORE}}
+
+```{=latex}
+\begin{center}
+```
+
+![|400](https://i.imgur.com/vwdvfVm.png){ width=60% }\
+
+```{=latex}
+\end{center}
+```
+
+### SPLORE
+
+Let's type the command that is in pink text: \textcolor{pico-magenta}{SPLORE}. Remember that the computer does not receive the typed command until you press the **ENTER** key.
 
 \commandline{> \textbf{SPLORE}}
 
@@ -256,6 +282,8 @@ Navigate around using the arrow keys on your keyboard, and use the **Z** key to 
 
 ---
 
+### Limits for a Design Culture
+
 This is an opportunity to introduce one quirk of PICO-8 games: they only use up to six different buttons for input, comprising the four arrow keys and two additional buttons.
 
 ```{=latex}
@@ -270,7 +298,7 @@ This is an opportunity to introduce one quirk of PICO-8 games: they only use up 
 
 By default, the **Z** key is the [O] and the **X** key is the [X] button. You could also use C/V or N/M respectively. These buttons are configurable, allowing you to change them if desired.
 
-::: warning
+::: info
 
 \commandline{> \textbf{KEYCONFIG}}
 
@@ -369,10 +397,10 @@ At the bottom of the screen, we can see:
 \commandline{\textcolor{pico-cyan}{\textbf{DIRECTORY: /}}}
 \commandline{\textcolor{pico-magenta}{\textbf{DEMOS}}}
 
-To enter the DEMOS directory, we can use the **CD** command.
+A \textcolor{pico-magenta}{\textbf{DEMOS}} directory has appeared under our home directory (`/`). Directories are in a \textcolor{pico-magenta}{\textbf{pink}} color, while files are in a \textcolor{gray}{\textbf{lightgray}} color. To enter the DEMOS directory, we can use the **CD** command.
 
 ::: info
-\commandline{> \textbf{CD <directory\_name>}}
+\commandline{> \textbf{CD \textcolor{gray}{<directory\_name>}}}
 
 \hfill
 
@@ -389,7 +417,8 @@ CD stands for "change directory." It allows us to navigate into a different dire
 \end{center}
 ```
 
-Now, if we type **LS** again, we can see the demo cartridges that were installed.
+Now, if we type **LS** again, we can can list the contents in the **DEMOS** directory, which should be the newly installed demo cartridges.
+
 
 ```{=latex}
 \begin{center}
@@ -399,11 +428,39 @@ Now, if we type **LS** again, we can see the demo cartridges that were installed
 \end{center}
 ```
 
+::: info
+
+\textcolor{teal}{\textbf{NOTE}}
+
+\hfill
+
+PICO-8 games are saved with the **.P8** extension, and are called _cartridges_, just like old video game cartridges.
+
+:::
+
+::: columns
+```{=latex}
+\begin{center}
+```
+
+![|300](https://i.imgur.com/EWiIcOi.png){ height=200 }\
+
+\textcolor{lightgray}{Imagined cartridge for PICO-8.}
+
+![|300](https://i.imgur.com/hhWBq1l.png){ height=200 }\
+
+\textcolor{lightgray}{Cartridge for the Nintendo Entertainment System (NES)}
+
+```{=latex}
+\end{center}
+```
+:::
+
 To run a cartridge, we can use the **LOAD** command followed by the name of the cartridge.
 
 ::: info
 
-\commandline{> \textbf{LOAD <cartridge\_name>}}
+\commandline{> \textbf{LOAD \textcolor{gray}{<cartridge\_name>}}}
 
 \hfill
 
@@ -415,7 +472,7 @@ Loads the specified cartridge.
 
 **TIP**
 
-A tip when typing file or directory names: you can use the TAB key to auto-complete names. Just type the first few letters and press TAB, and it will fill in the rest for you if there is a unique match.
+A tip when typing file or directory names: you can use the TAB key to auto-complete names. Just type the first few letters and press TAB, and it will fill in the rest for you if there is a unique match. Try typing: **LOAD AP** and press enter to see it autocomplete.
 
 :::
 
@@ -455,7 +512,7 @@ Runs the currently loaded cartridge.
 
 **TIP**
 
-You can press **Ctrl + L** to clear the terminal screen!
+You can press **Ctrl + L** (or **Cmd + L** on MacOS) to clear the terminal screen!
 
 :::
 
@@ -463,7 +520,7 @@ You can press **Ctrl + L** to clear the terminal screen!
 
 **TIP**
 
-Instead of typing **RUN** each time, you could just press **Ctrl + R** to run the currently loaded cartridge or restart it.
+Instead of typing **RUN** each time, you could just press **Ctrl + R** (**Cmd + R**) to run the currently loaded cartridge or restart it.
 
 :::
 
@@ -487,23 +544,34 @@ You may notice how we have a mouse! Yes, this is a graphical user interface (GUI
 
 Before writing a game, you can get acquainted with some simple functions in the console.
 
+---
+
+**PRINT**
+
+Print (draw) some text.
+
 ```lua
--- Print "HELLO WORLD" to the console
-PRINT("HELLO WORLD")
+-- Print "HELLO" to the console
+PRINT("HELLO")
 
 ```
 
 ```{=latex}
 \begin{center}
 ```
-![|600](https://i.imgur.com/su0WADl.png){ width=60% }\
+![|600](https://i.imgur.com/su0WADl.png){ width=50% }\
 ```{=latex}
 \end{center}
 ```
 
+**RECTFILL**
+
+Draw a rectangle with a filled color.
+
 ```lua
--- Draw a rectangle at x = (80, 80)
--- and y = (120, 100)
+-- Draw a rectangle at:
+-- x = (80, 80)
+-- y = (120, 100)
 -- with a fill color of 12
 RECTFILL(80,80,120,100,12)
 ```
@@ -511,7 +579,7 @@ RECTFILL(80,80,120,100,12)
 ```{=latex}
 \begin{center}
 ```
-![|600](https://i.imgur.com/tYCbXLl.png){ width=60% }\
+![|600](https://i.imgur.com/tYCbXLl.png){ width=50% }\
 ```{=latex}
 \end{center}
 ```
@@ -540,7 +608,7 @@ end
 
 ## Making a Simple Animation
 
-As a first exercise let's create a floating cloud like Cory Arcangel's [Super Mario Clouds](https://en.wikipedia.org/wiki/Super_Mario_Clouds).
+As a first exercise let's create a floating cloud animation inspired by Cory Arcangel's [Super Mario Clouds](https://en.wikipedia.org/wiki/Super_Mario_Clouds) artwork, made by modifying a Super Mario Bros. cartridge.
 
 ```{=latex}
 \begin{center}
@@ -582,11 +650,11 @@ Note how I draw it in the top left-most tile, which is assigned the number "000"
 \end{center}
 ```
 
-Return to the terminal screen by pressing "ESC" again.
+Return to the terminal screen by pressing **ESC** again.
 
-### The spr() function
+### The SPR() function
 
-You can draw a sprite onto the screen by using the spr() function.
+You can draw a sprite onto the screen by using the **SPR()** function.
 
 The first parameter is _n_, which is the assigned **number of the sprite**. In our case, we drew our sprite in the top left-most box, which is assigned the value of 0.
 
@@ -609,7 +677,7 @@ spr(0, 20, 20)
 ```{=latex}
 \begin{center}
 ```
-![|600](https://i.imgur.com/WgBXIPA.png){ width=90% }\
+![|600](https://i.imgur.com/WgBXIPA.png){ width=60% }\
 ```{=latex}
 \end{center}
 ```
@@ -631,8 +699,15 @@ You could draw more than one using the sprite command if that is useful to you.
 ```lua
 -- spr(sprite_number, x, y, w, h)
 
--- draw from sprite 0 at (20, 20), with tile width of 1 and height of 2 included
+-- draw from sprite 0 at (20, 20)
+-- with tile width of 1 and height of 2
 spr(0, 20, 20, 1, 2) 
+```
+
+```{=latex}
+\[
+\DownArrow[1cm][>=latex,blue,thick,dashed]
+\]
 ```
 
 ```{=latex}
@@ -644,8 +719,15 @@ spr(0, 20, 20, 1, 2)
 ```
 
 ```lua
--- draw from sprite 0 at (20, 20), with tile width of 2 and height of 1 included
+-- draw from sprite 0 at (20, 20)
+-- with tile width of 2 and height of 1
 spr(0, 20, 20, 2, 1) 
+```
+
+```{=latex}
+\[
+\DownArrow[1cm][>=latex,blue,thick,dashed]
+\]
 ```
 
 ```{=latex}
@@ -656,9 +738,18 @@ spr(0, 20, 20, 2, 1)
 \end{center}
 ```
 
+\pagebreak
+
 ```lua
--- draw from sprite 0 at (20, 20), with tile width of 2 and height of 2 included
+-- draw from sprite 0 at (20, 20)
+-- with tile width of 2 and height of 2
 spr(0, 20, 20, 2, 2) 
+```
+
+```{=latex}
+\[
+\DownArrow[1cm][>=latex,blue,thick,dashed]
+\]
 ```
 
 ```{=latex}
@@ -766,7 +857,7 @@ end
 ```{=latex}
 \begin{center}
 ```
-![|600](https://i.imgur.com/pBS7XyG.png){ width=100% }\
+![|600](https://i.imgur.com/pBS7XyG.png){ width=70% }\
 ```{=latex}
 \end{center}
 ```
@@ -792,18 +883,23 @@ function _draw()
 end
 ```
 
-::: box
+::: info
 
-> `cls(0)` is the equivalent of using:
-> ```lua
-> rectfill(0,0,127,127,0)
-> ```
+\textcolor{teal}{\textbf{NOTE}}
+
+\hfill
+
+`cls(0)` is the equivalent of using:
+```lua
+rectfill(0,0,127,127,0)
+```
 
 :::
+
 ```{=latex}
 \begin{center}
 ```
-![|600](https://i.imgur.com/bkvaBND.png){ width=100% }\
+![|600](https://i.imgur.com/bkvaBND.png){ width=70% }\
 ```{=latex}
 \end{center}
 ```
@@ -863,7 +959,13 @@ Or you could use a different color. I'll just use the dark blue color instead.
 
 When the cloud completely exits the frame, we are left with just a blank blue screen. We should reset it to the left side so that it becomes visible again.
 
-To do this, we can use an if statement. In English, if the cloud is out of frame on the right, then reset it to a position on the left side.
+To do this, we can use an **if statement**. 
+
+::: box
+
+"**if** the cloud is out of frame on the right, then reset it to a position on the left side"
+
+:::
 
 We can write the code in the `_update()` function.
 
@@ -878,6 +980,8 @@ end
 If cloud_x becomes higher than 127, it means it has completely left the frame; therefore, that is when the reset should happen.
 
 The reset position should be a negative value that is the width of the sprite size, so -8.
+
+\pagebreak
 
 ### Full Minimal Program
 
